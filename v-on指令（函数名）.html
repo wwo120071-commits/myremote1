@@ -18,8 +18,8 @@
         isShow:true
       },
       methods:{
-        fn(){
-          app.isShow = !app.isShow
+        fn(){//让提供的所有methods中的函数，this都指向当前实例对象app
+          this.isShow = !this.isShow
         }
       }
     })
