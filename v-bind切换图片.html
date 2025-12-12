@@ -17,7 +17,7 @@
     <button v-show="index > 0" @click="index--">上一页</button>
     <img v-bind:src="img[index]" v-bind:title="title[index]"> 
     <button v-show="index < img.length - 1" @click="index++">下一页</button>
-
+</div>
 <script>
   const app = new Vue({
     el:'#app',
