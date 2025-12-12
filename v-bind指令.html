@@ -9,7 +9,7 @@
 <body>
   <div id="app">
   <img v-bind:src="img" v-bind:title="title"> 
-  <!-- //v-bind指令可以省略不写，直接写:属性名="属性值"也可以 -->
+  <!-- //v-bind指令可以省略不写，直接写:属性名="属性值"也可以v-bind动态设置html的标签属性，src\url\title -->
   <!-- <img :src="img" :title="title">  //这两种写法是等价的 -->
   </div>
   <script>
@@ -21,5 +21,6 @@
       }
     })
     </script>
+
 </body>
 </html>
