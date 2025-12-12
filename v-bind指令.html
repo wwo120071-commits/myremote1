@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="./vue.js/vue.js"></script>
+</head>
+<body>
+  <div id="app">
+  <img v-bind:src="img" v-bind:title="title"> 
+  <!-- //v-bind指令可以省略不写，直接写:属性名="属性值"也可以 -->
+  <!-- <img :src="img" :title="title">  //这两种写法是等价的 -->
+  </div>
+  <script>
+    const app = new Vue({
+      el:'#app',
+      data:{
+        img:'./img/img1.jpg',
+        title:'Shenjiayi'
+      }
+    })
+    </script>
+</body>
+</html>
