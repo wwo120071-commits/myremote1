@@ -8,9 +8,9 @@
 </head>
 <body>
   <div id="app">
-    <button v-on:mouseover="count++">+</button>
+    <button @mouseover="count++">+</button>
     <span>{{count}}</span>
-    <button v-on:click="count--">-</button>
+    <button @click="count--">-</button>
   </div>
   <script>
     const app = new Vue({
