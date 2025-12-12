@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="./vue.js/vue.js"></script>
+</head>
+<body>
+  <div id="app">
+<div>
+  <h3>小羊自动售货机</h3>
+  <button @click="fn(5)">可乐5元</button>
+  <button @click="fn(5)">雪碧5元</button>
+  <button @click="fn(10)">咖啡10元</button>
+</div>
+<p>当前余额：{{money}}</p>
+  </div>
+  <script>
+    const app = new Vue({
+      el:'#app',
+      data:{
+        money:100
+      },
+      methods:{
+        fn(money){
+          this.money = this.money - money//最右边的money是在调用函数时传参传进来的
+        }
+      }
+    })
+  </script>
+</body>
+</html>
