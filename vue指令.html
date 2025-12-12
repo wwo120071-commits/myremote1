@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="./vue.js/vue.js"></script>
+</head>
+<body>
+  <div v-html="htmlStr" id="app"></div>
+  <script>
+    const app = new Vue({
+      el:'#app',
+      data:{
+        htmlStr:'<h1>hello vue</h1>'
+      }
+    })
+  </script>
+</body>
+</html>
