@@ -9,7 +9,13 @@
 <body>
   <div id="app">
     <ul>
-      <li v-for="item in booklist">
+      <li v-for="item in booklist" :key="item.id">
+        <!-- key的作用： -->
+        <!-- 1. 帮助vue识别每个节点的唯一性，从而更高效地更新DOM
+        2. 可以在使用v-for循环渲染列表时，确保每个列表项都有一个唯一的key属性 --> 
+        <!-- 避免重复渲染相同的元素，提高渲染效率 -->
+         <!-- v-for的默认行为是根据数组的索引来渲染列表项，但是当数组中的元素发生变化时，vue会根据key来判断是否需要更新DOM -->
+          <!-- v-for的默认行为会尝试原地修改元素（就地复用） -->
        <span> {{item.name}} </span>
        <span> {{item.author}} </span>
         <button @click="del(item.id)">删除</button></li>
